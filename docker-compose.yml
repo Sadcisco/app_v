@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  flutter:
+    image: cirrusci/flutter:latest
+    container_name: flutter_app
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: flutter run
+    ports:
+      - "3000:3000"
